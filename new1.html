@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+             padding: 20px;
+        }
+
+        .image-container img {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Images</h1>
+    <div class="image-container" id="images"></div>
+
+    <script>
+        const container = document.getElementById('images');
+
+        for (let id = 5; id <= 14; id++) {
+            const img = document.createElement('img');
+            img.src = `https://via.assets.so/movie.png?id=${id}&q=95&w=360&h=360&fit=fill`;
+            img.alt = `Movie Image ID ${id}`;
+            img.width = 250; 
+            img.height= 250;
+            container.appendChild(img);
+        }
+    </script>
+
+</body>
+</html>
